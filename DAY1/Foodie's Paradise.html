@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Paradise</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Menu Section */
+        #menu {
+            text-align: center;
+        }
+
+        #menu h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item:active {
+            transform: scale(1.05);
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .menu-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .menu-item .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Subscription Section */
+        #contact {
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input {
+            width: 250px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var name = document.getElementById("name").value;
+
+            if (!email || !name) {
+                alert("Please fill in both fields.");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            document.getElementById("thank-you-message").style.display = "block";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Foodie's Paradise</h1>
+        <p>Your gateway to a delicious experience!</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Foodie's Paradise!</h2>
+        <p>At Foodie's Paradise, we serve fresh, delicious meals made with love and the finest ingredients.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Pizza Margherita</h3>
+                <p>A classic Italian pizza with mozzarella, basil, and tomatoes.</p>
+                <p class="price"><strong>₹999</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spaghetti Carbonara</h3>
+                <p>A creamy pasta dish with pancetta, eggs, cheese, and black pepper.</p>
+                <p class="price"><strong>₹1,099</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Caesar Salad</h3>
+                <p>Crisp romaine lettuce, creamy dressing, croutons, and parmesan cheese.</p>
+                <p class="price"><strong>₹799</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Zinger Burger</h3>
+                <p>Spicy crispy chicken burger with lettuce and mayo.</p>
+                <p class="price"><strong>₹299</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Peri Peri Fries</h3>
+                <p>Crispy fries tossed in tangy peri peri seasoning.</p>
+                <p class="price"><strong>₹199</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Gooey Brownie</h3>
+                <p>Warm and gooey chocolate brownie served with vanilla ice cream.</p>
+                <p class="price"><strong>₹249</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscription-form" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="thank-you-message" style="display: none; color: green;">Thank you for subscribing!</p>
+    </section>
+
+    <footer>
+        <p>Address: 123 Delicious St, Foodie City, FC 4567</p>
+        <div>
+            <p>Follow Us:</p>
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+        <p class="copyright">© 2025 Foodie's Paradise.</p>
+    </footer>
+</body>
+</html>

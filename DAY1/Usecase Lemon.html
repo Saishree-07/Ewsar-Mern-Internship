@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Offering</title>
+</head>
+<body>
+
+  <script>
+    function calculate() {
+      const lemonsInHand = parseInt(prompt("Enter the number of lemons you have:")); 
+      const lemonsPerGod = 7; 
+      let output = '';
+
+      if (lemonsInHand < 7) {
+        output += `God 1: ${lemonsInHand} offered\n`;
+        output += `God 2: need ${lemonsPerGod}\n`;
+        output += `God 3: need ${lemonsPerGod}\n`;
+        output += `Shortage: 14`;
+      } else if (lemonsInHand < 14) {
+        output += `God 1: ${lemonsPerGod} offered\n`;
+        output += `God 2: ${lemonsInHand - lemonsPerGod} offered\n`;
+        output += `God 3: need ${lemonsPerGod}\n`;
+        output += `Shortage: ${lemonsPerGod - (lemonsInHand - lemonsPerGod)}`;
+      } else if (lemonsInHand < 21) {
+        output += `God 1: ${lemonsPerGod} offered\n`;
+        output += `God 2: ${lemonsPerGod} offered\n`;
+        output += `God 3: having ${lemonsInHand - 14} need ${lemonsPerGod - (lemonsInHand - 14)}\n`;
+        output += `Shortage: ${lemonsPerGod - (lemonsInHand - 14)}`;
+      } else if (lemonsInHand === 21) {
+        output += `God 1: ${lemonsPerGod} offered\n`;
+        output += `God 2: ${lemonsPerGod} offered\n`;
+        output += `God 3: ${lemonsPerGod} offered\n`;
+        output += `Sufficient`;
+      } else {
+        output += `God 1: ${lemonsPerGod} offered\n`;
+        output += `God 2: ${lemonsPerGod} offered\n`;
+        output += `God 3: ${lemonsPerGod} offered\n`;
+        output += `Shortage: ${lemonsInHand - (3 * lemonsPerGod)}`;
+      }
+
+      alert(output); 
+    }
+
+    calculate(); 
+  </script>
+
+</body>
+</html>

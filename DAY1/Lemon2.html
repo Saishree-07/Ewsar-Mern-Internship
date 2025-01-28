@@ -1,0 +1,35 @@
+<html>
+<script>
+let x=prompt("No of lemon in the hand: ")
+
+if(x>=21){
+   if(x==21){
+        console.log("god 1:7 offered , god 2:7 offered , god 3:7 offered")
+        console.log("suffient")
+}
+else{
+ console.log("god 1:7 offered , god 2:7 offered , god 3:7 offered")
+console.log("surplus")}
+}
+else{
+let needed = 21 - x;         
+let offered = Math.floor(x / 7);      
+   if (offered == 2) {
+               let s= x-14
+            console.log("God 1:7 offered, God 2:7 offered");
+            console.log("having :"+s);
+            console.log("needed: " + needed );
+        } else if (offered == 1) {
+           let d =x-7
+            console.log("God 1:7 offered");
+              console.log("having :"+d);
+
+            console.log("needed: " + needed );
+        } else {
+            console.log("Not enough lemons to offer.");
+            console.log("needed: " + needed );
+        }
+}
+
+</script>
+</html>
