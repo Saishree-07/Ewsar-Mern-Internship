@@ -1,0 +1,502 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #640d83, #320d6d);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ff0077;
+  color: #fff;
+}
+
+/* Hero Section */
+.home-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+.home-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff0077 ;
+}
+
+.profile-image-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 3px #ff0077;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.profile-image-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Styles */
+section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  max-width: 1200px;
+  text-align: center;
+  min-height: 400px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  background: #2c2c2c;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+
+section ul li:hover {
+  background: #3b3b3b;
+  transform: scale(1.02);
+}
+
+/* Projects Section */
+.projects-section h2 {
+  color: white; /* Same color for the section title */
+}
+
+.projects-section ul li h3 {
+  color: #ff0077; /* Apply color to all h3 elements inside the project section */
+}
+
+.project-section ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2c2c2c;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.project-section ul li::before {
+  content: '✔️';
+  color: #ff0077;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.project-section ul li h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff0077;
+}
+/* Add specific styling for Udemy and SkillRack certifications */
+/* General styling for the highlighted certifications */
+.highlight {
+  color: #ff0077; /* default color for all highlights */
+}
+
+/* Apply #ff0077 to Udemy and SkillRack specifically */
+.certifications-section ul li span.highlight:nth-child(2),
+.certifications-section ul li span.highlight:nth-child(6) {
+  color: #ff0077;
+}
+
+
+/* General Section Styling for Skills */
+.skills-section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  max-width: 1200px;
+  text-align: center;
+  min-height: 400px; /* Consistent height */
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increased gap between boxes */
+}
+
+/* Skills Box */
+.skills-category {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Skills Heading Styling */
+.skills-category h1 {
+  color: #ff0077; /* Changed to match your requested color */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.skills-category h2 {
+  color: #ff0077; /* Changed to match your requested color */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-category ul li {
+  background: #3b3b3b;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.skills-category ul li:hover {
+  background: #4b4b4b;
+  transform: scale(1.02);
+}
+
+/* Hover effect to scale the box */
+.skills-category:hover {
+  transform: scale(1.02); /* Box scales up on hover */
+  background: #333; /* Darkens background slightly */
+}
+
+/* General Section Styling for Education */
+.education-section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  max-width: 1200px;
+  text-align: center;
+  min-height: 400px; /* Consistent height */
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increased gap between boxes */
+}
+
+/* Education Box */
+.education-category {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Education Heading Styling */
+.education-category h3 {
+  color: #ff0077;
+  font-size: 1.5rem;  /* Similar font size as other sections */
+  margin-bottom: 10px;
+}
+
+/* List Styling for Education Details */
+.education-category p {
+  color: #fff;  /* Keeping the text white */
+  font-size: 1rem;  /* Font size for the paragraph */
+  margin: 5px 0;
+}
+
+/* Hover effect to scale the box */
+.education-category:hover {
+  transform: scale(1.05); /* Box scales up on hover */
+  background: #333; /* Darkens background slightly on hover */
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 30px;
+  background: #1a1a1a; /* Deep black background */
+  margin: 30px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Decorative Lines */
+.contact-section::before,
+.contact-section::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(90deg, #ff0077, #640d83);
+  animation: glow-line 4s infinite;
+}
+
+.contact-section::before {
+  top: 10px;
+  left: 10%;
+}
+
+.contact-section::after {
+  bottom: 10px;
+  right: 10%;
+}
+
+@keyframes glow-line {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Heading */
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+ 
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Contact Details */
+.contact-details {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  color: #ff0077;
+}
+
+.contact-details a {
+  color: #ff0077;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-details a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.contact-details button {
+  background-color: #ff0077;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-details button:hover {
+  background-color: #d60068;
+  transform: scale(1.05);
+}
+
+/* Contact Form (if you have one) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ff0077;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #222;
+  color: #f5f5f5;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff0077;
+  background-color: #1a1a1a;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+  background: #ff0077;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #d60068;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .form-group {
+    max-width: 100%;
+  }
+
+  .contact-details button {
+    padding: 10px 18px;
+  }
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077, 0 0 30px #ff0077;
+  }
+  50% {
+    box-shadow: 0 0 20px #d60068, 0 0 40px #d60068, 0 0 60px #d60068;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077, 0 0 30px #ff0077;
+  }
+}
+
+.profile-image-container:hover {
+  animation: glow 2s infinite alternate;
+}
+
+
+
